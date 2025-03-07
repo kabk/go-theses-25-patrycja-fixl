@@ -109,7 +109,7 @@ h2 {
   height: 2vh;
   margin: 10px;
   margin-left: 0;
-  scroll-margin-top: 80px;
+  /* scroll-margin-top: 15px; */
   font-size: 1.2rem;
   font-family: "Didai", sans-serif;
   font-variant-caps: all-small-caps;
@@ -132,7 +132,7 @@ nav {
 nav p {
   margin: 0;
   font-family: "Diatype-Thin";
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .index {
@@ -353,7 +353,7 @@ footer div {
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  /* background-color: white; */
   max-height: 0;
   overflow: hidden;
   max-width: 35ch;
@@ -493,6 +493,11 @@ img {
   }
 }
 
+div.littlefoot__content {
+z-index: 20000 !important; 
+
+}
+
 /* Extra small devices (phones, 600px and down) */
 
 
@@ -502,10 +507,25 @@ img {
     height: auto;
   }
 
+  .circle {
+      position: relative; 
+      margin-left: auto; 
+      margin-right: auto; 
+      margin-top: 10px; 
+      width: 25px; 
+      height: 25px; 
+      z-index: 30000; 
+      overflow: visible;
+      border: 1px solid black;
+    border-radius: 80px;
+    pointer-events: none;
+    }
+
+
   header,
   footer {
     width: 100vw;
-    height: auto;
+    height: 10vh;
     overflow: auto;
     position: fixed;
     left: 0;
@@ -578,8 +598,6 @@ div.index {
     padding-right: 1.5em;
   }
 
-
-
   h2 {
     scroll-margin-top: 80px;
   }
@@ -620,9 +638,64 @@ div.index {
     margin: 1px;
     max-width: 40ch;
   }
+
+
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 300px) {
+  .page-wrapper {
+    display: flex;
+    height: auto;
+  }
+
+  main{
+    padding-left: 1em;
+    padding-right: 1em;
+
+  }
+
+  p {
+    margin: 1px;
+    max-width: 60ch;
+  }
+
+
+  footer {
+    bottom: 0;
+    text-align: center;
+    /* z-index: 1000; */
+    flex-direction: column;
+    display: flex;
+    /* background-color: rgb(255, 255, 255) !important; */
+    padding-bottom: .5rem;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    overflow-y: auto;
+  }
+
+  div.littlefoot__content {
+    margin-bottom: 40px;
+  }
+
+}
+
 @media only screen and (min-width: 400px) {
   .page-wrapper {
     display: flex;
@@ -668,6 +741,46 @@ div.index {
     overflow-y: auto;
   }
 
+  div.littlefoot__content {
+    margin-bottom: 40px;
+  }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+
+
+  .accordion {
+    justify-content: center;
+    text-align: center;
+    color: rgb(136, 136, 136);
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  .panel {
+    background-color: transparent;
+    align-self: center;
+    /* text-align: center; */
+    padding: unset;
+    width: unset;
+    margin: auto;
+  }
+
+  p.panel {
+    width: 100%;
+    height: auto;
+    left: unset;
+    align-self: center;
+    /* text-align: center; */
+  }
+  
+  .active, .accordion:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+
 }
 
 @media only screen and (min-width: 450px) {
@@ -680,6 +793,39 @@ div.index {
     padding-left: 2em;
     padding-right: 2em;
 
+  }
+
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
   }
 
 }
@@ -702,6 +848,42 @@ div.index {
     max-width: 40ch;
   }
 
+ div.littlefoot__content p {
+    max-width: unset;
+  }
+
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
+  }
+
 }
 
 @media only screen and (min-width: 550px) {
@@ -719,6 +901,38 @@ div.index {
   p {
     margin: 1px;
     max-width: 40ch;
+  }
+
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
   }
 
 }
@@ -740,6 +954,38 @@ div.index {
     max-width: 50ch;
   }
 
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
+  }
+
 }
 
 @media only screen and (min-width: 650px) {
@@ -757,6 +1003,38 @@ div.index {
   p {
     margin: 1px;
     max-width: 45ch;
+  }
+
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
   }
 
 }
@@ -778,11 +1056,55 @@ div.index {
     max-width: 45ch;
   }
 
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
+  }
+
+  
+
+}
+
+
+@media only screen and (MIN-width: 768px) {
+
+div.littlefoot__content {
+  margin-bottom: unset;
+}
+
 }
 
 
 
-@media only screen and (min-width: 844px) {
+
+@media only screen and (max-width: 300px) {
   .page-wrapper {
     display: flex;
     height: auto;
@@ -804,8 +1126,8 @@ div.index {
     box-sizing: border-box;
     overflow: auto;
     height: 100vh;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 4em;
+    padding-right: 4em;
   }
 
   p {
@@ -886,12 +1208,61 @@ div.index {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+
+  footer {
+    position: fixed;
+    height: auto;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  footer:has(.active) {
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.357) !important;
+
+    z-index: 1001;
+    flex-direction: column;
+    display: flex;
+  }
+  footer:has(.active) h2 {
+    padding-block: 0.5rem;
+  }
+  footer:has(.active) h2 + div {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow-y: auto;
+  }
+
+  
+    .circle {
+      display: block;
+      position: relative; 
+      margin-left: auto; 
+      margin-right: auto; 
+      margin-top: 10px; 
+      width: 25px; 
+      height: 25px; 
+      z-index: 30000; 
+      overflow: visible;
+      border: 1px solid black;
+    border-radius: 80px;
+    pointer-events: none;
+    }
+
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+
+
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -950,7 +1321,7 @@ div.index {
     height: 2vh;
     margin: 10px;
     margin-left: 0;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 10px;
     font-size: 1.2rem;
     font-family: "Didai", sans-serif;
     font-variant-caps: all-small-caps;
@@ -973,7 +1344,7 @@ div.index {
   nav p {
     margin: 0;
     font-family: "Diatype-Thin";
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .index {
@@ -1010,6 +1381,7 @@ div.index {
     border-radius: 80px;
     pointer-events: none;
     transition: all 0.5s;
+    /* z-index: 20000; */
   }
 
   i {
@@ -1021,7 +1393,15 @@ div.index {
   }
 
   .sekcja-epilogue {
-    margin-bottom: 80rem;
+    margin-bottom: 20rem;
+  }
+
+  #thank-you{
+    font-size: 1.2rem;
+    font-family: "Didai", sans-serif;
+    font-variant-caps: all-small-caps;
+    font-weight: 100;
+    color: rgb(203, 203, 203);
   }
 
   /* Section Styles */
@@ -1229,6 +1609,16 @@ html::after {
   background: rgb(255, 255, 255);
   z-index: 1000000;
 }
+
+
+/* h2 {
+  scroll-margin-top: 15px;
+}
+
+h2#abstract-title {
+  margin-top: 15px;
+
+} */
 
 @keyframes fadeOut {
   to {
