@@ -141,7 +141,7 @@ docReady(function () {
     let index = sections.length;
 
     const scrollY =
-      window.innerWidth <= 768 ? window.scrollY : mainElement.scrollTop;
+      window.innerWidth <= 844 ? window.scrollY : mainElement.scrollTop;
     while (--index && scrollY + 100 < sections[index].offsetTop) {}
 
     navLinks.forEach((link) => link.classList.remove("active"));
@@ -154,7 +154,7 @@ docReady(function () {
       const circleLeft = linkRect.left;
       // console.log(activeLink);
 
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 844) {
         // console.log('left updated');
         console.log(circleLeft);
 

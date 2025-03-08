@@ -180,7 +180,7 @@ i {
 }
 
 .sekcja-epilogue {
-  margin-bottom: 80rem;
+  margin-bottom: 10rem;
 }
 
 /* Section Styles */
@@ -284,27 +284,33 @@ figcaption {
   line-height: 15px;
 }
 
-.landing {
+a.landing.copy, 
+a.landing {
+  WIDTH:100VW;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   overflow: hidden;
+
 }
 
+
 .landing img {
-  margin-top: 130px !important;
-  display: block;
-  width: 65%;
+  margin-top: 290px;
+  width: 50%;
   height: auto;
   transform: rotate(90deg);
   overflow: hidden;
+  z-index: 10000;
 }
 
-.copy {
-  margin-top: 40px !important;
-  overflow: hidden;
+.copy img {
+  margin-top: -60px; 
+  width: 50%;
+
 }
+
 
 /* Toggle Button */
 #toggle-btn {
@@ -484,6 +490,31 @@ img {
   animation-duration: 1.5s;
 }
 
+#thank-you{
+  font-size: 1rem;
+  font-family: "Diatype-Thin", sans-serif;
+  /* font-variant-caps: all-small-caps; */
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  font-variant-numeric: oldstyle-nums;
+}
+
+.small-caps {
+  font-size: 1.2rem;
+  font-family: "Didai", sans-serif;
+  font-variant-caps: all-small-caps;
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  font-variant-numeric: oldstyle-nums;
+} 
+
+.credits{
+  padding: .5rem;
+  /* backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.357); */
+  /* background-color: rgba(228, 249, 252, 0.535); */
+}
+
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -508,7 +539,7 @@ z-index: 20000 !important;
   }
 
   .circle {
-      position: relative; 
+      position: relative !important; 
       margin-left: auto; 
       margin-right: auto; 
       margin-top: 10px; 
@@ -747,7 +778,64 @@ div.index {
 
 }
 
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+
+.landing img {
+  margin-top: 200px;
+  width: 100%;
+  height: auto;
+  transform: rotate(90deg);
+  overflow: hidden !important;
+  z-index: 10000;
+}
+
+.copy img {
+  margin-top: unset;
+}
+  
+  
+}
+
+@media only screen and (min-width: 700px) and (max-width: 950px) {
+
+  .landing img {
+    margin-top: 300px !important;
+    width: 70%;
+    height: auto;
+    transform: rotate(90deg);
+    overflow: hidden;
+    z-index: 10000;
+  }
+  
+  .copy img {
+    margin-top: -20px !important;
+  }
+    
+    
+  }
+
+  @media only screen and (min-width: 950px) and (max-width: 1200px) {
+
+    .landing img {
+      margin-top: 150px;
+      width: 52%;
+      height: auto;
+      transform: rotate(90deg);
+      overflow: hidden;
+      z-index: 10000;
+    }
+    
+    .copy img {
+      margin-top: -20px !important;
+    }
+      
+      
+    }
+
+
 @media only screen and (min-width: 300px) and (max-width: 1200px) {
+
+
 
 
   .accordion {
@@ -1099,6 +1187,8 @@ div.littlefoot__content {
   margin-bottom: unset;
 }
 
+
+
 }
 
 
@@ -1244,7 +1334,7 @@ div.littlefoot__content {
 
   
     .circle {
-      display: block;
+      /* display: block; */
       position: relative; 
       margin-left: auto; 
       margin-right: auto; 
@@ -1388,21 +1478,10 @@ div.littlefoot__content {
     font-family: "Diatype-Thin" !important;
   }
 
-  .sekcja {
-    margin-bottom: 5rem;
-  }
+ 
 
-  .sekcja-epilogue {
-    margin-bottom: 20rem;
-  }
+ 
 
-  #thank-you{
-    font-size: 1.2rem;
-    font-family: "Didai", sans-serif;
-    font-variant-caps: all-small-caps;
-    font-weight: 100;
-    color: rgb(203, 203, 203);
-  }
 
   /* Section Styles */
   #abstract,
@@ -1505,27 +1584,7 @@ div.littlefoot__content {
     line-height: 15px;
   }
 
-  .landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .landing img {
-    margin-top: 130px !important;
-    display: block;
-    width: 65%;
-    height: auto;
-    transform: rotate(90deg);
-    overflow: hidden;
-  }
-
-  .copy {
-    margin-top: 40px !important;
-    overflow: hidden;
-  }
+  
 
   /* Toggle Button */
   #toggle-btn {
