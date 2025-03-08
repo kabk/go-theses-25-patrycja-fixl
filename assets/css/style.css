@@ -113,7 +113,7 @@ h2 {
   font-family: "Didai", sans-serif;
   font-variant-caps: all-small-caps;
   font-weight: 100;
-  color: rgb(237, 0, 0);
+  color: rgb(136, 240, 0);
   cursor: pointer;
 }
 
@@ -637,7 +637,7 @@ div.index {
   h2#abstract-title {
     margin-top: 80px;
     font-family: "Didai", sans-serif;
-    color:rgb(255, 0, 76)
+    color:rgb(0, 85, 255)
   }
 
   footer {
@@ -1418,7 +1418,7 @@ div.littlefoot__content {
     font-family: "Didai", sans-serif;
     font-variant-caps: all-small-caps;
     font-weight: 100;
-    color: rgb(253, 0, 0);
+    color: rgb(254, 228, 0);
     cursor: pointer;
   }
 
