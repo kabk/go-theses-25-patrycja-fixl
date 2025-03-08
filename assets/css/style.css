@@ -3,10 +3,8 @@
 /* Font Face Declaration */
 @font-face {
   font-family: "Didai";
-  src: url("/assets/fonts/DidaiTextVariable/Didai.woff2") format("truetype");
-
-  /* font-family: "OCR";
-  src: url("/assets/fonts/OCR/OCRBStd.otf") format("truetype"); */
+  src: url("../assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
+  
 }
 
 @font-face {
