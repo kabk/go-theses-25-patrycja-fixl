@@ -3,19 +3,19 @@
 /* Font Face Declaration */
 @font-face {
   font-family: "Didai";
-  src: url("assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
+  src: url("/assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
   
 }
 
 
 @font-face {
   font-family: "Diatype";
-  src: url("assets/fonts/ABCDiatype/ABCDiatype-Medium.otf") format("truetype");
+  src: url("/assets/fonts/ABCDiatype/ABCDiatype-Medium.otf") format("truetype");
 }
 
 @font-face {
   font-family: "Diatype-Thin";
-  src: url("assets/fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
+  src: url("/assets/fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
 }
 
 *{
