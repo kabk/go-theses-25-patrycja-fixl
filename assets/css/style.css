@@ -3,7 +3,7 @@
 /* Font Face Declaration */
 @font-face {
   font-family: "Didai";
-  src: url("/assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
+  src: url("https://raw.githubusercontent.com/kabk/go-theses-25-patrycja-fixl/master/assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
   
 }
 
@@ -113,7 +113,7 @@ h2 {
   font-family: "Didai", sans-serif;
   font-variant-caps: all-small-caps;
   font-weight: 100;
-  color: rgb(136, 240, 0);
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -637,7 +637,7 @@ div.index {
   h2#abstract-title {
     margin-top: 80px;
     font-family: "Didai", sans-serif;
-    color:rgb(0, 85, 255)
+    color:rgb(255, 0, 76)
   }
 
   footer {
@@ -1418,7 +1418,7 @@ div.littlefoot__content {
     font-family: "Didai", sans-serif;
     font-variant-caps: all-small-caps;
     font-weight: 100;
-    color: rgb(254, 228, 0);
+    color: rgb(0, 0, 0);
     cursor: pointer;
   }
 
