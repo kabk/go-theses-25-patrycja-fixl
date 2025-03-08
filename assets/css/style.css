@@ -3,7 +3,7 @@
 /* Font Face Declaration */
 @font-face {
   font-family: "Didai";
-  src: url("Didai.woff2") format("woff2");
+  src: url("../fonts/Didai.woff2") format("woff2");
   
 }
 
