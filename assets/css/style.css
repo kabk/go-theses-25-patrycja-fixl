@@ -24,6 +24,11 @@
   src: url("/assets/fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
 }
 
+*{
+  font-family: sans-serif;
+}
+
+
 /* General Styles */
 body {
   margin: 0;
@@ -127,6 +132,7 @@ nav {
   height: calc(100vh - 10vh);
   width: 100%;
   display: flex;
+
 }
 
 nav p {
