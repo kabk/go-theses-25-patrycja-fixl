@@ -2,24 +2,20 @@
 
 /* Font Face Declaration */
 @font-face {
-  font-family: "Di1dai";
-  src: url("https://raw.githubusercontent.com/kabk/go-theses-25-patrycja-fixl/master/assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
+  font-family: "Didai";
+  src: url("../fonts/DidaiTextVariable/Didai.woff2") format("woff2");
   
 }
 
-@font-face {
-  font-family: "Didai";
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap") format("woff2");
-}
 
 @font-face {
   font-family: "Diatype";
-  src: url("/assets/fonts/ABCDiatype/ABCDiatype-Medium.otf") format("truetype");
+  src: url("../fonts/ABCDiatype/ABCDiatype-Medium.otf") format("truetype");
 }
 
 @font-face {
   font-family: "Diatype-Thin";
-  src: url("/assets/fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
+  src: url("../fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
 }
 
 *{
@@ -124,7 +120,6 @@ h2 {
 header h2 {
   margin: 10px;
   margin-left: 20px;
-  font-family: "Didai", sans-serif;
 }
 
 nav {
@@ -640,8 +635,7 @@ div.index {
 
   h2#abstract-title {
     margin-top: 80px;
-    font-family: "Didai", sans-serif;
-    color:rgb(255, 0, 76)
+
   }
 
   footer {
