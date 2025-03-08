@@ -2,11 +2,15 @@
 
 /* Font Face Declaration */
 @font-face {
-  font-family: "Didai";
+  font-family: "Di1dai";
   src: url("https://raw.githubusercontent.com/kabk/go-theses-25-patrycja-fixl/master/assets/fonts/DidaiTextVariable/Didai.woff2") format("woff2");
   
 }
 
+@font-face {
+  font-family: "Didai";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap") format("woff2");
+}
 
 @font-face {
   font-family: "Diatype";
