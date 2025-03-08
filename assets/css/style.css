@@ -7,7 +7,7 @@
   
 }
 
-
+/*
 @font-face {
   font-family: "Diatype";
   src: url("../fonts/ABCDiatype/ABCDiatype-Medium.otf") format("truetype");
@@ -17,7 +17,7 @@
   font-family: "Diatype-Thin";
   src: url("../fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
 }
-
+*/
 *{
   font-family: sans-serif;
 }
