@@ -2,14 +2,14 @@
 
 /* Font Face Declaration */
 @font-face {
-  font-family: "Didai";
-  src: url("../fonts/Didai.woff2") format("woff2");
+  font-family: "didai";
+  src: url("../fonts/didai.woff2") format("woff2");
   
 }
 
 @font-face {
-  font-family: "Diatype";
-  src: url("../fonts/ABCDiatype-Medium.otf") format("truetype");
+  font-family: "diatype-medium";
+  src: url("../fonts/diatype-medium.woff2") format("woff2");
 }
 /*
 @font-face {
@@ -17,9 +17,7 @@
   src: url("../fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
 }
 */
-*{
-  font-family: sans-serif;
-}
+
 
 
 /* General Styles */
@@ -27,7 +25,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100vh;
-  font-family: "Didai", sans-serif;
+  font-family: "didai", sans-serif;
   font-weight: 100;
   /* animation: fade-in 500ms linear forwards; */
 }
@@ -79,7 +77,7 @@ main {
 
   padding-left: 8rem;
   padding-right: 8rem;
-  font-family: "Diatype", sans-serif;
+  font-family: "diatype-medium", sans-serif;
   font-size: 1.2rem;
   z-index: 10;
 }
@@ -109,7 +107,7 @@ h2 {
   margin-left: 0;
   /* scroll-margin-top: 15px; */
   font-size: 1.2rem;
-  font-family: "Didai", sans-serif;
+  font-family: "didai", sans-serif;
   font-variant-caps: all-small-caps;
   font-weight: 100;
   color: rgb(0, 0, 0);
@@ -390,7 +388,7 @@ div.littlefoot__content {
 div.littlefoot__content p {
   text-indent: 0rem !important;
   filter: blur(0px) !important;
-  font-family: "ABCDiatype-Medium";
+  font-family: "diatype-medium", sans-serif;
   font-size: 0.8rem;
 }
 
@@ -500,7 +498,7 @@ img {
 
 .small-caps {
   font-size: 1.2rem;
-  font-family: "Didai", sans-serif;
+  font-family: "didai", sans-serif;
   font-variant-caps: all-small-caps;
   font-weight: 100;
   color: rgb(0, 0, 0);
@@ -1380,7 +1378,7 @@ div.littlefoot__content {
 
     padding-left: 8rem;
     padding-right: 8rem;
-    font-family: "Diatype", sans-serif;
+    font-family: "diatype-medium", sans-serif;
     font-size: 1.2rem;
     z-index: 10;
   }
@@ -1412,7 +1410,7 @@ div.littlefoot__content {
     margin-left: 0;
     scroll-margin-top: 10px;
     font-size: 1.2rem;
-    font-family: "Didai", sans-serif;
+    font-family: "didai", sans-serif;
     font-variant-caps: all-small-caps;
     font-weight: 100;
     color: rgb(0, 0, 0);
