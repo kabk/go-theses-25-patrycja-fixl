@@ -1,6 +1,6 @@
-section, section *{ 
+/* section, section *{ 
   will-change: filter; 
-}
+} */
 
 footer,
 main {
