@@ -3,13 +3,13 @@
 /* Font Face Declaration */
 @font-face {
   font-family: "didai";
-  src: url("fonts/didai.woff2") format("woff2");
+  src: url("../fonts/didai.woff2") format("woff2");
   
 }
 
 @font-face {
   font-family: "diatype-medium";
-  src: url("fonts/diatype-medium.woff2") format("woff2");
+  src: url("../fonts/diatype-medium.woff2") format("woff2");
 }
 /*
 @font-face {
