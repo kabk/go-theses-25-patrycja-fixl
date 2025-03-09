@@ -11,12 +11,12 @@
   font-family: "diatype-medium";
   src: url("../fonts/diatype-medium.woff2") format("woff2");
 }
-/*
+
 @font-face {
-  font-family: "Diatype-Thin";
-  src: url("../fonts/ABCDiatype/ABCDiatype-Thin.otf") format("truetype");
+  font-family: "diatype-thin";
+  src: url("../fonts/diatype-thin.otf") format("woff2");
 }
-*/
+
 
 
 
