@@ -1,6 +1,6 @@
-/* section, section *{ 
+section, section *{ 
   will-change: filter; 
-} */
+}
 
 footer,
 main {
@@ -107,7 +107,7 @@ header {
 }
 div.littlefoot__content p,
 main {
-  font-family: diatype-medium, sans-serif;
+  font-family:'diatype-medium', sans-serif;
 }
 main {
   flex-grow: 1;
