@@ -3,7 +3,7 @@
 /* Font Face Declaration */
 @font-face {
   font-family: "didai";
-  src: url("../../assets/fonts/didai.woff2") format("woff2");
+  src: url("../fonts/didai.woff2") format("woff2");
   
 }
 
@@ -14,11 +14,8 @@
 
 @font-face {
   font-family: "diatype-thin";
-  src: url("../../assets/fonts/diatype-thin.woff2") format("woff2");
+  src: url("../fonts/diatype-thin.woff2") format("woff2");
 }
-
-
-
 
 /* General Styles */
 body {
@@ -1474,11 +1471,6 @@ div.littlefoot__content {
   i {
     font-family: "Diatype-Thin" !important;
   }
-
- 
-
- 
-
 
   /* Section Styles */
   #abstract,
