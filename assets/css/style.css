@@ -25,12 +25,12 @@ body {
 /* section.chapter {
   will-change: filter;
   z-index: -1;
-} */
+}
 
 .littlefoot__content{
   will-change: transform, opacity;
   z-index: 30000 !important;
-}
+} */
 
 
 
