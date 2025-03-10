@@ -27,6 +27,12 @@ body {
   z-index: -1;
 } */
 
+.littlefoot__content{
+  will-change: transform, opacity;
+  z-index: 30000 !important;
+}
+
+
 
 @keyframes fade-in {
   0% {
