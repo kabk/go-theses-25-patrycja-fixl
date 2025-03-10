@@ -22,9 +22,9 @@ body {
   font-weight: 100;
 }
 
-section {
+/* section {
   will-change: filter;
-}
+} */
 
 @keyframes fade-in {
   0% {
