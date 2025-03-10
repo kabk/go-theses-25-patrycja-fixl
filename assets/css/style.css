@@ -22,13 +22,10 @@ body {
   font-weight: 100;
 }
 
-section {
+/* section {
   will-change: filter;
-}
+} */
 
-.littlefoot {
-  will-change: position;
-}
 
 @keyframes fade-in {
   0% {
