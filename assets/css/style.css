@@ -1562,7 +1562,8 @@ div.littlefoot__content {
   section.chapter p,
   section.chapter figure {
     /* Use a lighter blur or no blur on mobile */
-    filter: blur(5px);
+    will-change: filter;
+    position: inherit;
     /* Use transform instead of filter for better performance */
     transition: transform 0.8s ease, filter 0.8s ease;
   }
@@ -1575,6 +1576,9 @@ div.littlefoot__content {
   /* Reset any compositing layer issues */
   transform: translateZ(0);
   z-index: 20000 !important;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 0 !important;
 }
 
 div.littlefoot__content p {
