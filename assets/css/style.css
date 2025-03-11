@@ -1557,7 +1557,17 @@ div.littlefoot__content {
   }
 }
 
-
+@media (max-width: 1199px) {
+  section.chapter h2,
+  section.chapter p,
+  section.chapter figure {
+    /* Use a lighter blur or no blur on mobile */
+    will-change: filter;
+    /* position: inherit; */
+    /* Use transform instead of filter for better performance */
+    transition: transform 0.8s ease, filter 0.8s ease;
+  }
+}
 
 
 
