@@ -26,9 +26,6 @@ body {
   will-change: filter;
 }  */
 
-
-
-
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -1560,13 +1557,7 @@ div.littlefoot__content {
 
 /* Add this to optimize blur on mobile */
 @media (max-width: 1199px) {
-  section.chapter h2,
-  section.chapter p,
-  section.chapter figure {
-    /* Use a lighter blur or no blur on mobile */
-      will-change: filter;
-
-    /* Use transform instead of filter for better performance */
+  section.chapter {
     transition: transform 0.8s ease, filter 0.8s ease;
   }
 }
@@ -1576,6 +1567,7 @@ div.littlefoot__content {
   /* Reset any compositing layer issues */
   transform: translateZ(0);
   z-index: 20000 !important;
+  margin-bottom: ;
 }
 
 div.littlefoot__content p {
