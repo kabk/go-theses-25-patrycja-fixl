@@ -1580,8 +1580,8 @@ div.littlefoot__content {
     font-family: "diatype-medium", sans-serif;
     font-size: 0.8rem;
     z-index: 30000 !important;
-    bottom: 0 !important;
-    margin-bottom: 0 !important
+    /* bottom: 0 !important;
+    margin-bottom: 0 !important */
   }
 }
 
