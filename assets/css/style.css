@@ -648,8 +648,8 @@ div.littlefoot__content {
   }
 
   main {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   p {
@@ -1558,17 +1558,7 @@ div.littlefoot__content {
   }
 }
 
-/* Add this to optimize blur on mobile */
-@media (max-width: 1199px) {
-  section.chapter h2,
-  section.chapter p,
-  section.chapter figure {
-    /* Use a lighter blur or no blur on mobile */
-    /* filter: blur(2px); */
-    /* Use transform instead of filter for better performance */
-    transition: transform 0.8s ease, filter 0.8s ease;
-  }
-}
+
 
 /* Fix the littlefoot conflict */
 div.littlefoot__content {
