@@ -1552,13 +1552,16 @@ div.littlefoot__content {
   /* Only apply will-change on desktop devices */
   section.chapter {
     will-change: filter;
+    transition: filter 1s ease;
+
   }
 }
 
 /* Add this to optimize blur on mobile */
 @media (max-width: 1199px) {
   section.chapter {
-    transition: transform 0.8s ease, filter 0.8s ease;
+    transition: transform 0.8s ease, filter 1s ease;
+    
   }
 }
 
@@ -1567,7 +1570,6 @@ div.littlefoot__content {
   /* Reset any compositing layer issues */
   transform: translateZ(0);
   z-index: 20000 !important;
-  margin-bottom: ;
 }
 
 div.littlefoot__content p {
