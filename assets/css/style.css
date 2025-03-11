@@ -1552,7 +1552,7 @@ div.littlefoot__content {
   /* Only apply will-change on desktop devices */
   section.chapter {
     will-change: filter;
-    transition: filter 1s ease;
+    transition: transform 0.8s ease, filter 1s ease;
 
   }
 }
@@ -1563,13 +1563,14 @@ div.littlefoot__content {
     transition: transform 0.8s ease, filter 1s ease;
     
   }
-}
+
 
 /* Fix the littlefoot conflict */
 div.littlefoot__content {
   /* Reset any compositing layer issues */
   transform: translateZ(0);
   z-index: 20000 !important;
+  transition: transform 0.8s ease;
 }
 
 div.littlefoot__content p {
@@ -1579,6 +1580,8 @@ div.littlefoot__content p {
   transform: translateZ(0);
   font-family: "diatype-medium", sans-serif;
   font-size: 0.8rem;
+  transition: transform 0.8s ease;
+}
 }
 
 html::after {
