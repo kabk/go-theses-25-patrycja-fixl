@@ -648,8 +648,8 @@ div.littlefoot__content {
   }
 
   main {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
   }
 
   p {
@@ -1551,42 +1551,44 @@ div.littlefoot__content {
   }
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   section.chapter {
     will-change: filter;
   }
-}
+} */
 
-@media (max-width: 1199px) {
+@media (max-width: 844px) {
   section.chapter h2,
-  section.chapter p,
-  section.chapter figure {
-    /* Use a lighter blur or no blur on mobile */
+  section.chapter p{
     will-change: filter;
-    /* position: inherit; */
-    /* Use transform instead of filter for better performance */
-    transition: transform 0.8s ease, filter 0.8s ease;
+  }
+
+  div.littlefoot__content {
+    /* Reset any compositing layer issues */
+    transform: translateZ(0);
+    z-index: 30000 !important;
+    bottom: 0 !important;
+    margin-bottom: 0 !important;
+    
+  }
+  
+  div.littlefoot__content p {
+    text-indent: 0rem !important;
+    filter: blur(0px) !important;
+    /* Add hardware acceleration for the footnotes */
+    transform: translateZ(0);
+    font-family: "diatype-medium", sans-serif;
+    font-size: 0.8rem;
+    z-index: 30000 !important;
+    bottom: 0 !important;
+    margin-bottom: 0 !important
   }
 }
 
 
 
 /* Fix the littlefoot conflict */
-div.littlefoot__content {
-  /* Reset any compositing layer issues */
-  transform: translateZ(0);
-  z-index: 20000 !important;
-  
-}
 
-div.littlefoot__content p {
-  text-indent: 0rem !important;
-  filter: blur(0px) !important;
-  /* Add hardware acceleration for the footnotes */
-  transform: translateZ(0);
-  font-family: "diatype-medium", sans-serif;
-  font-size: 0.8rem;
-}
 
 html::after {
   position: fixed;
