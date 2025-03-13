@@ -194,7 +194,14 @@ section.chapter p,
 section.chapter figure {
   filter: blur(5px);
   transition: filter 1s ease;
+  visibility: hidden;
 }
+section.chapter h2.visible,
+section.chapter p.visible,
+section.chapter figure.visible {
+  visibility: visible;
+}
+
 
 /* Text Styles */
 p {

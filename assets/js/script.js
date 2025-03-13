@@ -1,1 +1,276 @@
-function docReady(e){"complete"===document.readyState||"interactive"===document.readyState?setTimeout(e,1):document.addEventListener("DOMContentLoaded",e)}function unBlurOnView(e){let t=e=>{e.forEach(e=>{e.isIntersecting?e.target.style.filter="none":e.target.removeAttribute("style")})},l=new IntersectionObserver(t,{rootMargin:"0px 0px -70%",threshold:0});document.querySelectorAll("section.chapter h2, section.chapter p, section.chapter figure, section.chapter figcaption").forEach(e=>{l.observe(e)})}docReady(function(){var e=document.getElementById("toggle-btn");e?e.addEventListener("click",function e(){var t=document.getElementById("terms");if(t.classList.contains("active")){let l=t.querySelectorAll(".active.accordion");for(let n of l){n.classList.remove("active");let r=n.parentElement.querySelector(".panel");r&&(r.style.maxHeight="")}t.classList.remove("transition"),setTimeout(function(e){t.classList.remove("active")},250)}else t.classList.add("active"),setTimeout(function(e){t.classList.add("transition")},1)}):console.error("Button not found: #toggle-btn");let t=document.querySelector('a[href="#abstract"]'),l=document.querySelector('a[href="#intro"]'),n=document.querySelector('a[href="#chapter-1"]'),r=document.querySelector('a[href="#chapter-2"]'),a=document.querySelector('a[href="#chapter-3"]'),c=document.querySelector('a[href="#chapter-4"]'),o=document.querySelector('a[href="#epilogue"]'),s=document.getElementById("abstract-title"),d=document.getElementById("abstract-text"),y=document.getElementById("intro-title"),g=document.getElementById("intro-text"),p=document.getElementById("chapter-1-title"),h=document.getElementById("chapter-1-text"),m=document.getElementById("chapter-2-title"),f=document.getElementById("chapter-2-text"),u=document.getElementById("chapter-3-title"),v=document.getElementById("chapter-3-text"),x=document.getElementById("chapter-4-title"),E=document.getElementById("chapter-4-text"),L=document.getElementById("epilogue-title"),B=document.getElementById("epilogue-text"),I=[{link:t,title:s,text:d},{link:l,title:y,text:g},{link:n,title:p,text:h},{link:r,title:m,text:f},{link:a,title:u,text:v},{link:c,title:x,text:E},{link:o,title:L,text:B},];I.forEach(e=>{e.link.addEventListener("click",function(t){var l,n,r;l=t,n=e.title,r=e.text,l.preventDefault(),n.style.filter="none",r.style.filter="none",n.scrollIntoView({behavior:"smooth"})})});let S=document.querySelectorAll("main #abstract-title, main section.chapter"),q=document.querySelectorAll(".index a"),b=document.querySelector(".circle"),$=document.querySelector("main");function k(){let e=S.length,t=window.innerWidth<=844?window.scrollY:$.scrollTop;for(;--e&&t+100<S[e].offsetTop;);if(q.forEach(e=>e.classList.remove("active")),q[e]){q[e].classList.add("active");let l=q[e],n=l.getBoundingClientRect(),r=n.top,a=n.left;window.innerWidth<=844?(console.log(a),b.style.left=`${a}px`,b.style.top=`${r}px`,b.style.marginLeft="5px",b.style.marginTop="10px"):(b.style.top=`${r}px`,b.style.left="0px",b.style.marginLeft="28px",b.style.marginTop="10px")}}k(),window.addEventListener("scroll",k),$.addEventListener("scroll",k);let _="",H="";window.addEventListener("resize",function(){document.body.classList.add("resize-animation-stopper"),H=(_="".getBoundingClientRect()).top+window.scrollY,b.style.top=`${H}px`,setTimeout(function(e){document.body.classList.remove("resize-animation-stopper")},250)}),unBlurOnView(I)});var i,acc=document.getElementsByClassName("accordion");for(i=0;i<acc.length;i++)acc[i].addEventListener("click",function(){for(var e=0;e<acc.length;e++)if(acc[e]!==this&&acc[e].classList.contains("active")){acc[e].classList.remove("active");var t=acc[e].nextElementSibling;t.style.maxHeight&&(t.style.maxHeight=null)}this.classList.toggle("active");var t=this.nextElementSibling;t.style.maxHeight?t.style.maxHeight=null:t.style.maxHeight=t.scrollHeight+"px"});window.addEventListener("scroll",()=>{console.log(window.scrollY)});
+// filepath: /Users/patrycjafixl/Library/Mobile Documents/com~apple~CloudDocs/Documents/GDY4/Digital Publishing /DP_Digital-Publishing_Thesis/thesis-website-github/boilerplate-without-css/assets/js/script.js
+
+function docReady(fn) {
+    if (
+      document.readyState === "complete" ||
+      document.readyState === "interactive"
+    ) {
+      setTimeout(fn, 1);
+    } else {
+      document.addEventListener("DOMContentLoaded", fn); // Calls function when DOM is fully loaded
+    }
+  }
+  
+  docReady(function () {
+    var dictionaryToggleBtn = document.getElementById("toggle-btn");
+  
+    if (dictionaryToggleBtn) {
+      dictionaryToggleBtn.addEventListener("click", toggleDictionary);
+    } else {
+      console.error("Button not found: #toggle-btn");
+    }
+  
+    function toggleDictionary() {
+      var terms = document.getElementById("terms");
+  
+      if (terms.classList.contains("active")) {
+        // disable all accordions
+        const activeAccordions = terms.querySelectorAll(".active.accordion");
+        for (const accordion of activeAccordions) {
+          accordion.classList.remove("active");
+          const panel = accordion.parentElement.querySelector(".panel");
+          if (panel) {
+            panel.style.maxHeight = "";
+          }
+        }
+  
+        terms.classList.remove("transition");
+  
+        setTimeout(function (e) {
+          terms.classList.remove("active");
+        }, 250);
+      } else {
+        terms.classList.add("active");
+  
+        setTimeout(function (e) {
+          terms.classList.add("transition");
+        }, 1);
+      }
+    }
+  
+    const abstractLink = document.querySelector('a[href="#abstract"]');
+    const introLink = document.querySelector('a[href="#intro"]');
+    const impulseLink = document.querySelector('a[href="#chapter-1"]');
+    const prepLink = document.querySelector('a[href="#chapter-2"]');
+    const travelLink = document.querySelector('a[href="#chapter-3"]');
+    const exploreLink = document.querySelector('a[href="#chapter-4"]');
+    const epilogueLink = document.querySelector('a[href="#epilogue"]');
+  
+    // Get both the elements that need the blur effect removed
+    const abstractTitle = document.getElementById("abstract-title");
+    const abstractText = document.getElementById("abstract-text");
+    const introTitle = document.getElementById("intro-title");
+    const introText = document.getElementById("intro-text");
+    const impulseTitle = document.getElementById("chapter-1-title");
+    const impulseText = document.getElementById("chapter-1-text");
+    const prepTitle = document.getElementById("chapter-2-title");
+    const prepText = document.getElementById("chapter-2-text");
+    const travelTitle = document.getElementById("chapter-3-title");
+    const travelText = document.getElementById("chapter-3-text");
+    const exploreTitle = document.getElementById("chapter-4-title");
+    const exploreText = document.getElementById("chapter-4-text");
+    const epilogueTitle = document.getElementById("epilogue-title");
+    const epilogueText = document.getElementById("epilogue-text");
+  
+    const unBlurSections = [
+      {
+        link: abstractLink,
+        title: abstractTitle,
+        text: abstractText,
+      },
+      {
+        link: introLink,
+        title: introTitle,
+        text: introText,
+      },
+      {
+        link: impulseLink,
+        title: impulseTitle,
+        text: impulseText,
+      },
+      {
+        link: prepLink,
+        title: prepTitle,
+        text: prepText,
+      },
+      {
+        link: travelLink,
+        title: travelTitle,
+        text: travelText,
+      },
+      {
+        link: exploreLink,
+        title: exploreTitle,
+        text: exploreText,
+      },
+      {
+        link: epilogueLink,
+        title: epilogueTitle,
+        text: epilogueText,
+      },
+    ];
+  
+    function unBlurSection(event, title, text) {
+      event.preventDefault();
+      title.style.filter = "none";
+      text.style.filter = "none";
+  
+      title.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  
+    unBlurSections.forEach((section) => {
+      section.link.addEventListener("click", function (event) {
+        unBlurSection(event, section.title, section.text);
+      });
+    });
+  
+    const sections = document.querySelectorAll(
+      "main #abstract-title, main section.chapter"
+    );
+    const navLinks = document.querySelectorAll(".index a");
+    const circle = document.querySelector(".circle");
+  
+    /**
+     * @type {HTMLElement}
+     */
+    const mainElement = document.querySelector("main");
+  
+    function setActiveLink() {
+      let index = sections.length;
+  
+      const scrollY =
+        window.innerWidth <= 768 ? window.scrollY : mainElement.scrollTop;
+      while (--index && scrollY + 100 < sections[index].offsetTop) {}
+  
+      navLinks.forEach((link) => link.classList.remove("active"));
+      if (navLinks[index]) {
+        navLinks[index].classList.add("active");
+  
+        const activeLink = navLinks[index];
+        const linkRect = activeLink.getBoundingClientRect();
+        const circleTop = linkRect.top;
+        const circleLeft = linkRect.left;
+        // console.log(activeLink);
+  
+        if (window.innerWidth <= 768) {
+          // console.log('left updated');
+          console.log(circleLeft);
+  
+          circle.style.left = `${circleLeft}px`;
+          circle.style.top = `${circleTop}px`;
+          circle.style.marginLeft = "5px";
+          circle.style.marginTop = "10px";
+        } else {
+          // console.log('top updated');
+          circle.style.top = `${circleTop}px`;
+          circle.style.left = "0px";
+          circle.style.marginLeft = "28px";
+          circle.style.marginTop = "10px";
+        }
+      }
+    }
+  
+    setActiveLink();
+  
+    window.addEventListener("scroll", setActiveLink);
+  
+    mainElement.addEventListener("scroll", setActiveLink);
+  
+    let thisActiveMenuItem = "";
+    let linkRect = "";
+    let circleTop = "";
+  
+  
+    window.addEventListener("resize", function () {
+      document.body.classList.add("resize-animation-stopper");
+      linkRect = thisActiveMenuItem.getBoundingClientRect();
+      circleTop = linkRect.top + window.scrollY;
+      circle.style.top = `${circleTop}px`;
+      setTimeout(function (e) {
+        document.body.classList.remove("resize-animation-stopper");
+      }, 250);
+    });
+  
+    // window.addEventListener("scroll", unBlurOnView);
+    unBlurOnView(unBlurSections);
+  });
+  
+  function unBlurOnView(targets) {
+    const options = {
+      rootMargin: "0px 0px -70%",
+      threshold: 0,
+    };
+  
+    const intersectionCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.filter = "none";
+        } else {
+          entry.target.removeAttribute("style");
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(intersectionCallback, options);
+
+
+    const checkItemVisibility = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add( 'visible' );
+          } else {
+            entry.target.classList.remove( 'visible' );
+          }
+        });
+      };
+    const visiblityObserver = new IntersectionObserver( checkItemVisibility, { rootMargin: "0px", threshold: 0 } );
+
+  
+    // targets.forEach((target) => {
+    //   observer.observe(target.title);
+    //   observer.observe(target.text);
+    // });
+  
+    document
+      .querySelectorAll(
+        "section.chapter h2, section.chapter p, section.chapter figure, section.chapter figcaption"
+      )
+      .forEach((target) => {
+        observer.observe(target);
+        visiblityObserver.observe(target);
+      });
+  }
+  
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      // Deactivate any currently active accordion
+      for (var j = 0; j < acc.length; j++) {
+        if (acc[j] !== this && acc[j].classList.contains("active")) {
+          acc[j].classList.remove("active");
+          var panel = acc[j].nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          }
+        }
+      }
+  
+      // Toggle the clicked accordion
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+  
+  window.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+  });
+  
