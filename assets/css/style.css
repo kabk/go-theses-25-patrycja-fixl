@@ -202,7 +202,6 @@ section.chapter figure.visible {
   visibility: visible;
 }
 
-
 /* Text Styles */
 p {
   margin: 1px;
@@ -371,6 +370,7 @@ div.littlefoot__content {
   --popover-background-color: white;
   --popover-max-height: fit-content;
   --popover-width: 20px;
+  visibility: visible;
 }
 
 div.littlefoot__content p {
@@ -378,6 +378,8 @@ div.littlefoot__content p {
   filter: blur(0px) !important;
   font-family: "diatype-medium", sans-serif;
   font-size: 0.8rem;
+  visibility: visible;
+
 }
 
 div.littlefoot__content a {
@@ -1567,15 +1569,15 @@ div.littlefoot__content {
 @media (max-width: 844px) {
   section.chapter h2,
   section.chapter p{
-    will-change: filter;
+    /* will-change: filter; */
   }
 
   div.littlefoot__content {
     /* Reset any compositing layer issues */
     transform: translateZ(0);
     z-index: 30000 !important;
-    bottom: 0 !important;
-    margin-bottom: 0 !important;
+    /* bottom: 0 !important;
+    margin-bottom: 0 !important; */
     
   }
   
@@ -1586,7 +1588,7 @@ div.littlefoot__content {
     transform: translateZ(0);
     font-family: "diatype-medium", sans-serif;
     font-size: 0.8rem;
-    z-index: 30000 !important;
+    /* z-index: 30000 !important; */
     /* bottom: 0 !important;
     margin-bottom: 0 !important */
   }

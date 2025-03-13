@@ -238,6 +238,11 @@ function docReady(fn) {
         "section.chapter h2, section.chapter p, section.chapter figure, section.chapter figcaption"
       )
       .forEach((target) => {
+        // if ( target.parentNode.classList.contains('littlefoot--print') ) {
+        //     target.style.color = 'red';
+        // }
+            
+
         observer.observe(target);
         visiblityObserver.observe(target);
       });
