@@ -1559,17 +1559,13 @@ div.littlefoot__content {
   }
 }
 
-@media (min-width: 1200px) {
+ @media (min-width: 1200px) {
   section.chapter {
     will-change: filter;
   }
-}
+} 
 
-@media (max-width: 844px) {
-  section.chapter h2,
-  section.chapter p{
-    /* will-change: filter; */
-  }
+
 
   div.littlefoot__content {
     /* Reset any compositing layer issues */
@@ -1591,7 +1587,7 @@ div.littlefoot__content {
     /* bottom: 0 !important;
     margin-bottom: 0 !important */
   }
-}
+
 
 
 
