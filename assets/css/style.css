@@ -73,6 +73,7 @@ main {
   font-family: "diatype-medium", sans-serif;
   font-size: 1.2rem;
   z-index: 10;
+  /* hyphens: auto; */
 }
 
 footer {
@@ -658,6 +659,12 @@ div.littlefoot__content {
   main {
     padding-left: 0.9em;
     padding-right: 0.9em;
+
+  }
+
+  .indent{
+    text-indent: 2rem;
+
   }
 
   p {
@@ -693,6 +700,8 @@ div.littlefoot__content {
   div.littlefoot__content {
     margin-bottom: 40px;
   }
+
+  
 }
 
 @media only screen and (min-width: 400px) {
